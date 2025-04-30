@@ -1,0 +1,271 @@
+:root {
+    --primary: #8A4FFF;
+    --background: #0F0B1D;
+    --surface: #1D1830;
+    --text: #FFFFFF;
+    --accent: #FF6B6B;
+    --text-color: var(--text);
+    --primary-color: var(--primary);
+}
+
+/* 404-specific styles */
+.container[data-page="404"] {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.container[data-page="404"] .card {
+    max-width: 500px;
+    margin: 2rem auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, var(--primary), #C56CF0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Modern standard */
+    -webkit-text-fill-color: transparent; /* Legacy WebKit fallback */
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    color: #A0A0C0;
+    font-size: 0.9rem;
+}
+
+.card {
+    background: var(--surface);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.mode-toggle {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 0.75rem;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+    background: var(--primary);
+    box-shadow: 0 4px 12px rgba(138, 79, 255, 0.3);
+}
+
+.form-group {
+    display: none;
+    margin-bottom: 2rem;
+}
+
+.form-group.active {
+    display: block;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #C0C0FF;
+}
+
+input[type="time"] {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    color: var(--text);
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+}
+.instruction{
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #C0C0FF;
+}
+.calculate-btn {
+     /* Fixed width */
+    width: auto;
+    /* Changed from 20px to 12px vertical padding */
+    padding: 12px 24px;
+    margin: 15px auto; 
+    font-size: 1rem;
+    border-radius: 28px;
+    background: var(--primary);
+    border: none;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color: var(--text);
+}
+
+
+.calculate-btn:hover {
+    transform: translateY(-2px);
+}
+
+.results-container {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.cycle-info {
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+}
+
+.time-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.2rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.time-card.recommended {
+    background: var(--primary);
+    box-shadow: 0 4px 12px rgba(138, 79, 255, 0.3);
+}
+
+.time {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+.site-footer {
+    margin-top: 3rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.credit {
+    color: #A0A0C0;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.github-link {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.github-link:hover {
+    color: var(--primary); /* Was using --primary-color */
+}
+
+.accent {
+    color: var(--primary); /* Was using --primary-color */
+    margin: 0 4px;
+}
+
+.author-name {
+    font-weight: 600;
+}
+
+.glasses {
+    font-style: normal;
+    margin-left: 4px;
+}
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Add browser-specific styling for pinned sites: */
+
+@media (prefers-color-scheme: dark) {
+    /* Windows dark mode support */
+    meta[name="msapplication-TileColor"] {
+        content: "#8A4FFF";
+    }
+}

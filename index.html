@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Core -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sleep Calculator | Optimal Wake & Sleep Times</title>
+        <meta name="description" content="Calculate optimal sleep times based on 90-minute sleep cycles. Determine when to sleep or wake up for refreshed mornings.">
+        <meta name="keywords" content="sleep calculator, sleep cycle calculator, optimal sleep times, wake up calculator, sleep planner">
+        <meta name="author" content="ibrah5em">
+        
+        <!-- Icons & Manifest -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#8A4FFF">
+        <link rel="shortcut icon" href="images/favicon/favicon.ico">
+        <!-- Open Graph/Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Sleep Cycle Calculator - Optimize Your Rest">
+        <meta property="og:description" content="Calculate ideal sleep times using 90-minute cycles">
+        <meta property="og:url" content="https://ibrah5em.github.io/sleep-calculator/">
+        <meta property="og:image" content="https://ibrah5em.github.io/sleep-calculator/images/preview-image.jpg">
+
+        <!-- Microsoft-specific meta tags -->
+
+        <meta name="msapplication-config" content="/browserconfig.xml">
+        <meta name="msapplication-TileColor" content="#8A4FFF">
+        <meta name="msapplication-TileImage" content="/images/favicon/mstile-144x144.png">
+        
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Sleep Cycle Calculator - Optimize Your Rest">
+        <meta name="twitter:description" content="Calculate ideal sleep times using 90-minute cycles">
+        <meta name="twitter:image" content="https://ibrah5em.github.io/sleep-calculator/images/preview-image.jpg">
+
+        <!-- Performance -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Styling -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Theme & Misc -->
+        <meta name="theme-color" content="#8A4FFF">
+        <meta name="msapplication-TileColor" content="#8A4FFF">
+        <link rel="canonical" href="https://ibrah5em.github.io/sleep-calculator">
+        
+
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="header" role="banner">
+                <h1>Sleep Cycle Calculator</h1>
+                <p class="tagline">Optimize your sleep patterns using 90-minute cycles</p>
+            </header>
+            
+            <main role="main">
+                <div class="card">
+                    <div class="mode-toggle" role="tablist">
+                        <button class="toggle-btn active" data-mode="wakeup" role="tab">Wake Up Time</button>
+                        <button class="toggle-btn" data-mode="sleepnow" role="tab">Sleep Now</button>
+                    </div>
+
+                    <form id="calculator-form" aria-label="Sleep calculator form">
+                        <div class="form-group active" data-mode="wakeup" role="tabpanel">
+                            <label for="wakeup-time">Desired Wake Up Time</label>
+                            <input type="time" id="wakeup-time" required value="09:00" aria-describedby="timeHelp">
+                            
+                        </div>
+
+                        <div class="form-group" data-mode="sleepnow" role="tabpanel">
+                            <p class="instruction" aria-label="Current time calculation">Fall asleep right now?</p>
+                        </div>
+
+                        <button type="submit" class="calculate-btn" aria-label="Calculate sleep times">
+                            <span>Calculate</span>
+                        </button>
+                    </form>
+
+                    <section class="results-container" aria-live="polite">
+                        <div class="results-header">
+                            <h2>Recommended Times</h2>
+                            <div class="cycle-info">(90-minute cycles)</div>
+                        </div>
+                        <div class="results-grid" id="results" role="region" aria-label="Calculation results"></div>
+                    </section>
+                </div>
+            </main>
+        </div>
+        <script src="js/script.js"></script>
+
+        <footer class="site-footer" role="contentinfo">
+            <div class="footer-content">
+                <p class="credit">
+                    Crafted by 
+                    <a href="https://github.com/ibrah5em" target="_blank" rel="noopener noreferrer" class="github-link">
+                        <span class="author-name">ibrah5em</span>
+                    </a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

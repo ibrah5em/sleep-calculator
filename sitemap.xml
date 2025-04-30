@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.sitemaps.org/schemas/sitemap/0.9/image"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://ibrah5em.github.io/sleep-calculator/</loc>
+    <lastmod>2024-02-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ibrah5em.github.io/sleep-calculator/images/preview-image.jpg</image:loc>
+      <image:title>Sleep Calculator Interface</image:title>
+      <image:caption>Calculate optimal sleep times using 90-minute cycles</image:caption>
+    </image:image>
+    <xhtml:link 
+      rel="alternate" 
+      hreflang="en" 
+      href="https://ibrah5em.github.io/sleep-calculator/" />
+  </url>
+
+</urlset>
