@@ -62,8 +62,7 @@ Visit `http://localhost:8000` or `http://localhost:8080`
 
 ## 🌐 Live Deployment
 
-Access the production version:  
-[https://ibrah5em.github.io/sleep-calculator](https://ibrah5em.github.io/sleep-calculator)
+Access the production version: [Here](https://ibrah5em.github.io/sleep-calculator)
 
 ## 📄 License
 
