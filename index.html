@@ -3,6 +3,7 @@
 
     <head>
         <!-- Core -->
+        <base href="https://ibrah5em.github.io/sleep-calculator/">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sleep Calculator | Optimal Wake & Sleep Times</title>
@@ -11,12 +12,12 @@
         <meta name="author" content="ibrah5em">
         <meta name="google-site-verification" content="AGRSkeXlHUI7MygK9WuC9mXO96pyJvCNJf97YbThjGo" />
         <!-- Icons & Manifest -->
-        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#8A4FFF">
-        <link rel="shortcut icon" href="images/favicon/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="/sleep-calculator/images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/sleep-calculator/images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/sleep-calculator/images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/sleep-calculator/site.webmanifest" crossorigin="use-credentials">
+        <link rel="mask-icon" href="/sleep-calculator/images/favicon/safari-pinned-tab.svg" color="#8A4FFF">
+        <link rel="shortcut icon" href="/sleep-calculator/images/favicon/favicon.ico">
         <!-- Open Graph/Facebook -->
         <meta property="og:type" content="website">
         <meta property="og:title" content="Sleep Cycle Calculator - Optimize Your Rest">
@@ -47,8 +48,12 @@
         <!-- Theme & Misc -->
         <meta name="theme-color" content="#8A4FFF">
         <meta name="msapplication-TileColor" content="#8A4FFF">
-        <link rel="canonical" href="https://ibrah5em.github.io/sleep-calculator">
-        
+        <link rel="canonical" href="https://ibrah5em.github.io/sleep-calculator/">        
+
+        <!-- PWA -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     </head>
 
@@ -92,18 +97,36 @@
                 </div>
             </main>
         </div>
+
+        
         <script src="js/script.js"></script>
+
         <!-- Schema.org Structured Data -->
         <script type="application/ld+json">
             {
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "Sleep Calculator",
-            "description": "Calculate optimal sleep/wake times using 90-minute cycles",
-            "operatingSystem": "Any",
-            "applicationCategory": "HealthApplication",
-            "screenshot": "https://ibrah5em.github.io/sleep-calculator/images/preview-image.jpg"
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "Sleep Calculator",
+              "url": "https://ibrah5em.github.io/sleep-calculator/",
+              "description": "Calculate optimal sleep/wake times using 90-minute cycles",
+              "operatingSystem": "Any",
+              "applicationCategory": "HealthApplication",
+              "screenshot": "https://ibrah5em.github.io/sleep-calculator/images/preview-image.jpg"
             }
+        </script>
+
+            <script>
+                // Changing service worker registration to
+                if ('serviceWorker' in navigator) {
+                  window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sleep-calculator/service-worker.js')
+                      .then(reg => {
+                        console.log('Service Worker registered for scope:', reg.scope);
+                        reg.update();
+                      })
+                      .catch(err => console.error('SW registration failed:', err));
+                  });
+                }
             </script>
 
         <footer class="site-footer" role="contentinfo">

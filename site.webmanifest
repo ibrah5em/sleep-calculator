@@ -1,25 +1,23 @@
 {
-    "name": "Sleep Calculator",
-    "short_name": "SleepCalc",
-    "description": "Calculate optimal sleep/wake times using 90-minute sleep cycles",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#0F0B1D",
-    "theme_color": "#8A4FFF",
-    "orientation": "portrait-primary",
-    "categories": ["health", "productivity", "tools"],
-    "lang": "en-US",
-    "scope": "/",
-    "icons": [
-      {
-        "src": "/images/favicon/android-chrome-192x192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "/images/favicon/android-chrome-512x512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      }
-    ]
+  "name": "Sleep Calculator",
+  "short_name": "SleepCalc",
+  "description": "Calculate optimal sleep/wake times using 90-minute sleep cycles",
+  "start_url": "/sleep-calculator/",
+  "scope": "/sleep-calculator/",
+  "display": "standalone",
+  "background_color": "#0F0B1D",
+  "theme_color": "#8A4FFF",
+  "icons": [
+    {
+      "src": "/sleep-calculator/images/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/sleep-calculator/images/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }

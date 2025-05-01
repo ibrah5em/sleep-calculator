@@ -1,71 +1,68 @@
-// service-worker.js
-const CACHE_NAME = 'sleep-calculator-v2'; // Increment version when updating assets
-const OFFLINE_URL = '404.html';
+const REPO_NAME = '/sleep-calculator'; // GitHub Pages repository name
+const CACHE_NAME = 'sleep-calculator-v3'; // Increment version
+const OFFLINE_URL = `${REPO_NAME}/404.html`;
+
+// All paths must include repository name
 const STATIC_ASSETS = [
-  '/',
-  'index.html',
-  'css/style.css',
-  'js/script.js',
-  'images/preview-image.jpg',
-  'images/favicon/android-chrome-192x192.png',
-  'images/favicon/android-chrome-512x512.png',
-  '404.html',
-  'sitemap.xml',
-  'robots.txt',
-  'site.webmanifest'
+  `${REPO_NAME}/`,
+  `${REPO_NAME}/index.html`,
+  `${REPO_NAME}/css/style.css`,
+  `${REPO_NAME}/js/script.js`,
+  `${REPO_NAME}/images/preview-image.jpg`,
+  `${REPO_NAME}/images/favicon/android-chrome-192x192.png`,
+  `${REPO_NAME}/images/favicon/android-chrome-512x512.png`,
+  `${REPO_NAME}/404.html`,
+  `${REPO_NAME}/site.webmanifest`
 ];
 
-// Install Event - Cache core assets
+// Install Event
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => {
-        console.log('[Service Worker] Caching core assets');
-        return cache.addAll(STATIC_ASSETS);
-      })
-      .catch(error => {
-        console.error('[Service Worker] Cache addAll failed:', error);
-      })
+      .then(cache => cache.addAll(STATIC_ASSETS))
       .then(() => self.skipWaiting())
   );
 });
 
-// Activate Event - Cleanup old caches
+// Activate Event
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then(cacheNames => {
-      return Promise.all(
-        cacheNames.map(cache => {
-          if (cache !== CACHE_NAME) {
-            console.log('[Service Worker] Removing old cache:', cache);
-            return caches.delete(cache);
-          }
-        })
-      );
-    })
-    .then(() => self.clients.claim())
+    caches.keys().then(cacheNames => Promise.all(
+      cacheNames.map(cache => {
+        if (cache !== CACHE_NAME) return caches.delete(cache);
+      })
+    )).then(() => self.clients.claim())
   );
 });
 
-// Fetch Event - Network first with cache fallback
+// Fetch Event (Stale-While-Revalidate strategy)
 self.addEventListener('fetch', (event) => {
-  // Skip non-GET requests and browser extensions
-  if (event.request.method !== 'GET' || 
-      event.request.url.startsWith('chrome-extension://')) return;
+  const requestUrl = new URL(event.request.url);
+  
+  // Handle same-origin requests only
+  if (requestUrl.origin !== location.origin) return;
 
+  // Navigation fallback
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      caches.match(`${REPO_NAME}/index.html`)
+        .then(cached => cached || fetch(event.request))
+    );
+    return;
+  }
+
+  // Cache-first for assets
   event.respondWith(
-    fetch(event.request)
-      .then(networkResponse => {
-        // Cache successful network responses
-        const responseClone = networkResponse.clone();
-        caches.open(CACHE_NAME)
-          .then(cache => cache.put(event.request, responseClone));
-        return networkResponse;
+    caches.match(event.request)
+      .then(cached => {
+        const fetched = fetch(event.request)
+          .then(network => {
+            const clone = network.clone();
+            caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
+            return network;
+          });
+        return cached || fetched;
       })
-      .catch(async () => {
-        // Fallback to cache then offline page
-        const cachedResponse = await caches.match(event.request);
-        return cachedResponse || caches.match(OFFLINE_URL);
-      })
+      .catch(() => caches.match(OFFLINE_URL))
   );
 });
