@@ -1,18 +1,18 @@
 // service-worker.js
 const CACHE_NAME = 'sleep-calculator-v2'; // Increment version when updating assets
-const OFFLINE_URL = '/404.html';
+const OFFLINE_URL = '404.html';
 const STATIC_ASSETS = [
   '/',
-  '/index.html',
-  '/css/style.css',
-  '/js/script.js',
-  '/images/preview-image.jpg',
-  '/images/favicon/android-chrome-192x192.png',
-  '/images/favicon/android-chrome-512x512.png',
-  '/404.html',
-  '/sitemap.xml',
-  '/robots.txt',
-  '/site.webmanifest'
+  'index.html',
+  'css/style.css',
+  'js/script.js',
+  'images/preview-image.jpg',
+  'images/favicon/android-chrome-192x192.png',
+  'images/favicon/android-chrome-512x512.png',
+  '404.html',
+  'sitemap.xml',
+  'robots.txt',
+  'site.webmanifest'
 ];
 
 // Install Event - Cache core assets
