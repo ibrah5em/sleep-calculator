@@ -115,19 +115,22 @@
             }
         </script>
 
-            <script>
-                // Changing service worker registration to
+        <script>
                 if ('serviceWorker' in navigator) {
-                  window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/sleep-calculator/service-worker.js')
-                      .then(reg => {
-                        console.log('Service Worker registered for scope:', reg.scope);
+                const isLocal = window.location.hostname === 'localhost';
+                const swPath = isLocal ? '/service-worker.js' : '/sleep-calculator/service-worker.js';
+                const scope = isLocal ? '/' : '/sleep-calculator/';
+                
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register(swPath, { scope })
+                    .then(reg => {
+                        console.log('SW registered:', reg);
                         reg.update();
-                      })
-                      .catch(err => console.error('SW registration failed:', err));
-                  });
+                    })
+                    .catch(err => console.error('SW registration failed:', err));
+                });
                 }
-            </script>
+        </script>
 
         <footer class="site-footer" role="contentinfo">
             <div class="footer-content">
