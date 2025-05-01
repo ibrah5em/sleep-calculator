@@ -1,5 +1,5 @@
 const REPO_NAME = '/sleep-calculator'; // GitHub Pages repository name
-const CACHE_NAME = 'sleep-calculator-v3'; // Increment version
+const CACHE_NAME = 'sleep-calculator-v4'; // V4 now.
 const OFFLINE_URL = `${REPO_NAME}/404.html`;
 
 // All paths must include repository name
