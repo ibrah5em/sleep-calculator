@@ -6,6 +6,8 @@
 
 A scientific sleep calculator that helps you determine optimal sleep/wake times based on 90-minute sleep cycles. Perfect for maintaining healthy sleep patterns and waking up refreshed.
 
+*Helping the world sleep better, one cycle at a time* 💤
+
 
 ## ✨ Features
 
@@ -76,4 +78,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Maintained by [ibrah5em](https://github.com/ibrah5em)**  
-*Helping the world sleep better, one cycle at a time* 💤
