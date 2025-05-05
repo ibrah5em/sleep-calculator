@@ -84,12 +84,11 @@ Access the production version: [Click Here](https://ibrah5em.github.io/sleep-cal
 
 ## 📄 License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![License File](https://img.shields.io/github/license/ibrah5em/sleep-calculator)](LICENSE)
 
 This project is licensed under the **MIT License** — a simple and permissive open-source license that allows reuse, modification, and private or commercial usage with proper attribution.
 
-> 📁 See the [LICENSE](LICENSE) file for complete terms and conditions.
+📁 See the [LICENSE](LICENSE) file for complete terms and conditions.
 
 ## 🙏 Acknowledgments
 
@@ -100,9 +99,7 @@ Special thanks and inspiration go to the following resources:
 - 🎨 **[Flaticon](https://www.flaticon.com/)** — for providing icon assets used in the UI.
 - 🧪 **[Google Lighthouse](https://developers.google.com/web/tools/lighthouse/)** — for performance auditing tools that helped shape optimization.
 
-## 👨‍💻 Maintainer
 
 [![GitHub - ibrah5em](https://img.shields.io/badge/Maintained%20by-ibrah5em-0078D4?logo=github)](https://github.com/ibrah5em)
 
-This project is actively maintained by [**ibrah5em**](https://github.com/ibrah5em).  
 Feel free to open issues, suggest improvements, or contribute new features.
