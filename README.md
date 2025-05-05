@@ -1,8 +1,11 @@
 # 🌙 Sleep Calculator - Optimize Your Sleep Cycles
 
-[![GitHub Pages Deployment](https://img.shields.io/badge/demo-live-success)](https://ibrah5em.github.io/sleep-calculator/)
-[![MIT License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-[![PWA Enabled](https://img.shields.io/badge/PWA-✓-purple)](https://web.dev/progressive-web-apps/)
+[![GitHub Deployment](https://img.shields.io/github/deployments/ibrah5em/sleep-calculator/github-pages?label=Deployment)](https://github.com/ibrah5em/sleep-calculator/deployments)
+[![GitHub Issues](https://img.shields.io/github/issues/ibrah5em/sleep-calculator)](https://github.com/ibrah5em/sleep-calculator/issues)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Top Language](https://img.shields.io/github/languages/top/ibrah5em/sleep-calculator)](https://github.com/ibrah5em/sleep-calculator)
+[![Repo Size](https://img.shields.io/github/repo-size/ibrah5em/sleep-calculator)](https://github.com/ibrah5em/sleep-calculator)
+[![Last Commit](https://img.shields.io/github/last-commit/ibrah5em/sleep-calculator)](https://github.com/ibrah5em/sleep-calculator/commits/main)
 
 A scientific sleep calculator that helps you determine optimal sleep/wake times based on 90-minute sleep cycles. Perfect for maintaining healthy sleep patterns and waking up refreshed.
 
@@ -73,7 +76,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Sleep cycle research by National Sleep Foundation
 - PWA best practices from [web.dev](https://web.dev)
-- Icon design using [Figma](https://figma.com)
+- Icon design using [flaticon](https://www.flaticon.com/)
 
 ---
 
