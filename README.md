@@ -11,11 +11,6 @@
 
 A scientific sleep calculator that helps you determine optimal sleep/wake times based on 90-minute sleep cycles. Perfect for maintaining healthy sleep patterns and waking up refreshed.
 
-> 🌜 **Why Sleep Cycles Matter:**  
-> Waking up at the end of a sleep cycle (instead of in the middle) improves alertness, mood, and energy levels. This app calculates ideal sleep/wake times based on REM science.
-
-*Helping the world sleep better, one cycle at a time* 💤
-
 ---
 
 ## 📚 Table of Contents
