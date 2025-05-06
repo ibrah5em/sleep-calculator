@@ -11,6 +11,10 @@
 
 A scientific sleep calculator that helps you determine optimal sleep/wake times based on 90-minute sleep cycles. Perfect for maintaining healthy sleep patterns and waking up refreshed.
 
+<p align="center">
+  <img src="preview.png" alt="Project Preview" />
+</p>
+
 ---
 
 ## 📚 Table of Contents
