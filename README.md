@@ -11,8 +11,6 @@
 
 A scientific sleep calculator that helps you determine optimal sleep/wake times based on 90-minute sleep cycles. Perfect for maintaining healthy sleep patterns and waking up refreshed.
 
-![Project Preview](preview.png)
-
 ---
 
 ## 📚 Table of Contents
@@ -29,6 +27,12 @@ A scientific sleep calculator that helps you determine optimal sleep/wake times 
 - [Acknowledgments](#-acknowledgments)
 
 ---
+
+## 🚀 Demo
+
+Here’s a quick preview of the project:
+
+![Project Preview](preview.png)
 
 ## ✨ Features
 
